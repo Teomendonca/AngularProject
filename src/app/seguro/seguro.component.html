@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Apolice de Seguro</h1>
+    <form class="form-group">
+        <!-- // Nome do segurado,
+        // o sexo, a idade
+        // valor do automóvel -->
+        <div class="form-group">
+            <label id="name">Nome</label>
+            <input type="text" class="form-control" id="name" required 
+                [(ngModel)]="name" name="name">
+        </div>
+        <div class="form-group">
+            <label id="gender">Genero</label>
+            <select [(ngModel)]="gender" name="gender" class="form-control">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age" class="form-label">Idade</label>
+            <input type="number" class="form-control" id="age" required 
+                [(ngModel)]="age" name="age">
+        </div>
+        <div class="form-group">
+            <label for="vehicle_value" class="form-label">Valor do veículo</label>
+            <input type="number" class="form-control" required id="vehicle_value" 
+                [(ngModel)]="vehicle_value" name="vehicle_value">
+        </div>
+        <button type="submit" class=" btn btn-primary" (click)="avaliar()">Avaliar</button>
+        <button type="reset" class="btn btn-secundary">Limpar</button>
+
+        <div class="text-center mb-5" *ngIf="final_value">
+        <div class=" container">
+            <div>Nome: {{name}}</div>
+            <div>Idade: {{age}}</div>
+            <div>Genero: {{gender}}</div>
+            <div>valor veiculo: {{vehicle_value}}</div>
+            <div>valor final: {{final_value}}</div>
+
+        </div>
+            O valor da apólice é de {{final_value | currency:'BRL'}}
+        </div>
+    </form>
+</div>
