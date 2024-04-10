@@ -9,6 +9,13 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { UsersComponent } from './home/components/users/users.component';
+import { NavBarComponent } from './home/components/nav-bar/nav-bar.component';
+import { WelcomeComponent } from './home/components/welcome/welcome.component';
+import { TodoListComponent } from './home/pages/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +25,19 @@ import { HomeComponent } from './home/home.component';
     CarouselComponent,
     ListaClienteComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CadastroUsuarioComponent,
+    WelcomeComponent,
+    UsersComponent,
+    NavBarComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
