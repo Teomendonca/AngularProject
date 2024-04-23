@@ -12,10 +12,12 @@ import { HomeComponent } from './home/home.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { UsersComponent } from './home/components/users/users.component';
+import { UsersComponent } from './home/pages/users/users.component';
 import { NavBarComponent } from './home/components/nav-bar/nav-bar.component';
 import { WelcomeComponent } from './home/components/welcome/welcome.component';
 import { TodoListComponent } from './home/pages/todo-list/todo-list.component';
+import { AddUsersComponent } from './home/pages/add-users/add-users.component';
+import { EditUsersComponent } from './home/pages/edit-users/edit-users.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { TodoListComponent } from './home/pages/todo-list/todo-list.component';
     WelcomeComponent,
     UsersComponent,
     NavBarComponent,
-    TodoListComponent
+    TodoListComponent,
+    AddUsersComponent,
+    EditUsersComponent
   ],
   imports: [
     BrowserModule,

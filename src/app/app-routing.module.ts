@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './home/components/welcome/welcome.component';
-import { UsersComponent } from './home/components/users/users.component';
+import { UsersComponent } from './home/pages/users/users.component';
 import { TodoListComponent } from './home/pages/todo-list/todo-list.component';
 
 const routes: Routes = [
