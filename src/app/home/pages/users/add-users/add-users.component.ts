@@ -33,4 +33,13 @@ export class AddUsersComponent {
       ])
     })
   }
+
+  onSubmit(){
+    console.log("Usuário criado com sucesso")
+    console.log(this.addUserForm.value);
+    this.router.navigate(['app/users'])
+  }
+  cancel(){
+    this.router.navigate(['app/users'])
+  }
 }
