@@ -1,18 +1,15 @@
 #title{
     margin-bottom: 20px;
     margin-left: 10px;
-    color: rgb(255, 255, 255);
 }
 .btn{
     margin-right: 4px;
     margin-bottom: 8px;
 }
-#background{
-    background-color: #787878;
-}
+
 .container{
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #c3c3c3;
+    background-color: #cecece;
     border-radius: 8px;
 }

@@ -25,11 +25,11 @@ export class AddUsersComponent {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(20)]),
+        Validators.maxLength(15)]),
       passwordConfirmation: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(20)
+        Validators.maxLength(15)
       ])
     })
   }
