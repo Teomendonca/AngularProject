@@ -1,0 +1,7 @@
+#Add-func{
+    display: flex;
+    justify-content: end;
+}
+.btn{
+    margin-right: 4px;
+}

@@ -2,7 +2,7 @@
     <h1>Adiionar Usuário</h1>
     <div>
         <!-- add forms -->
-        <form>
+        <form [formGroup]="addUserForm">
             <div class="form-outline mb-4">
                 <label class="form-label" for="form3Example1cg">Nome Completo</label>
                 <input type="text" formControlName="name" class="form-control form-control-lg">

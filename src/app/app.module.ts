@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
+// import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
 import { FooterComponent } from './footer/footer.component';
@@ -16,16 +16,17 @@ import { UsersComponent } from './home/pages/users/users.component';
 import { NavBarComponent } from './home/components/nav-bar/nav-bar.component';
 import { WelcomeComponent } from './home/components/welcome/welcome.component';
 import { TodoListComponent } from './home/pages/todo-list/todo-list.component';
-import { AddUsersComponent } from './home/pages/add-users/add-users.component';
-import { EditUsersComponent } from './home/pages/edit-users/edit-users.component';
+import { AddUsersComponent } from './home/pages/users/add-users/add-users.component';
+import { EditUsersComponent } from './home/pages/users/edit-users/edit-users.component';
+import { UsersListComponent } from './home/pages/users/users-list/users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MenuSuperiorComponent,
-    CarouselComponent,
-    ListaClienteComponent,
+    // MenuSuperiorComponent,
+    // CarouselComponent,
+    // ListaClienteComponent,
     FooterComponent,
     HomeComponent,
     CadastroUsuarioComponent,
@@ -34,7 +35,8 @@ import { EditUsersComponent } from './home/pages/edit-users/edit-users.component
     NavBarComponent,
     TodoListComponent,
     AddUsersComponent,
-    EditUsersComponent
+    EditUsersComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
