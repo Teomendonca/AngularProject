@@ -1,9 +1,9 @@
 <div id="background">
-  
+
   <div id="title">
-    <h1 >Adicionar Usuário</h1>
+    <h1>Adicionar Usuário</h1>
   </div>
-  
+
   <div class="container">
     <form [formGroup]="addUserForm">
       <div class="form-outline mb-4">
@@ -30,7 +30,7 @@
         <label class="form-label" for="form3Example1cg">Função</label>
         <!-- <input type="text" formControlName="name" class="form-control form-control-lg"> -->
         <select class="form-select" formControlName="func">
-          <option *ngFor="let key of keys" [value]="key" >{{func[key]}}</option>
+          <option *ngFor="let key of keys" [value]="key">{{func[key]}}</option>
         </select>
 
       </div>

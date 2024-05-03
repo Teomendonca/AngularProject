@@ -1,1 +1,65 @@
-<p>edit-users works!</p>
+<div id="background">
+
+    <div id="title">
+        <h1> Editar Usuário</h1>
+    </div>
+
+    <div class="container">
+        <form [formGroup]="addUserForm">
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example1cg">Nome Completo</label>
+                <input type="text" formControlName="name" class="form-control form-control-lg">
+
+                <div
+                    *ngIf="addUserForm.get('name')?.invalid && (addUserForm.get('name')?.dirty || addUserForm.get('name')?.touched)">
+                    <div class="text-danger">Nome é obrigatório</div>
+                </div>
+            </div>
+            <!-- email -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example1cg">E-mail</label>
+                <input type="text" formControlName="email" class="form-control form-control-lg">
+
+                <div
+                    *ngIf="addUserForm.get('email')?.invalid && (addUserForm.get('email')?.dirty || addUserForm.get('email')?.touched)">
+                    <div class="text-danger">E-mail é obrigatório</div>
+                </div>
+            </div>
+            <!-- função-->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example1cg">Função</label>
+                <!-- <input type="text" formControlName="name" class="form-control form-control-lg"> -->
+                <select class="form-select" formControlName="func">
+                    <option *ngFor="let key of keys" [value]="key">{{func[key]}}</option>
+                </select>
+
+            </div>
+            <!-- senha-->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example1cg">Senha</label>
+                <input type="password" formControlName="password" class="form-control form-control-lg">
+
+                <div
+                    *ngIf="addUserForm.get('password')?.invalid && (addUserForm.get('password')?.dirty || addUserForm.get('password')?.touched)">
+                    <div class="text-danger">Senha é obrigatório</div>
+                </div>
+            </div>
+            <!-- confirm password -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example1cg">Senha</label>
+                <input type="password" formControlName="passwordConfirmation" class="form-control form-control-lg">
+
+                <div
+                    *ngIf="addUserForm.get('passwordConfirmation')?.invalid && (addUserForm.get('passwordConfirmation')?.dirty || addUserForm.get('passwordConfirmation')?.touched)">
+                    <div class="text-danger">confirmação de senha é obrigatório</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <button (click)="onSubmit()" [disabled]="!addUserForm.valid" class="btn btn-primary">Save</button>
+                <button (click)="cancel()" class="btn btn-danger">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+</div>
