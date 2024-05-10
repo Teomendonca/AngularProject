@@ -4,7 +4,7 @@ export enum Func {
   "Engenheiro de FE",
   "Engenheiro de BE",
   "Analista de dados",
-  "Lider técnico",
+  "Lider técnico"
 }
 
 @Component({

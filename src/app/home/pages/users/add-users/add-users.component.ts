@@ -10,7 +10,7 @@ import { Func } from '../users.component';
 })
 export class AddUsersComponent {
   addUserForm: FormGroup;
-  func = Func
+  func = Func;
   keys: any[];
   constructor(private router: Router) {
 

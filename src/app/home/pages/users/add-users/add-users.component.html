@@ -28,7 +28,6 @@
       <!-- função-->
       <div class="form-outline mb-4">
         <label class="form-label" for="form3Example1cg">Função</label>
-        <!-- <input type="text" formControlName="name" class="form-control form-control-lg"> -->
         <select class="form-select" formControlName="func">
           <option *ngFor="let key of keys" [value]="key">{{func[key]}}</option>
         </select>
@@ -59,7 +58,6 @@
         <button (click)="onSubmit()" [disabled]="!addUserForm.valid" class="btn btn-primary">Save</button>
         <button (click)="cancel()" class="btn btn-danger">Cancel</button>
       </div>
-
     </form>
   </div>
 </div>
