@@ -1,13 +1,60 @@
-<div>
+<div id="background">
+
+  <div id="title" class="container">
+    <h1>Home</h1>
+  </div>
 
   <div class="container-fluid">
-    <div class="row  align-items-center text-center full-height">
+    <div class="row  align-items-center text-center">
+
+
       <div class="col">
-        <h1>Welcome to your aplication</h1>
-        <h2>You are logged in</h2>
-        <!-- Add users table -->
-        <!-- QTD de usuários cadastrados -->
+        <!-- qtd de usuários cadastrados -->
+        <h2>Usuários cadastrados</h2>
+        <div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>4</td>
+                <!-- updated with the qtd from database -->
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <div class="col">
         <!-- QTD de usuários Por tipo de função-->
+        <h2>Usuários por função</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th *ngFor="let key of keys ">{{func[key]}} </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td *ngFor="let key of keys ">1</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <div class="row  align-items-center text-center full-height">
+          <div class="col"></div>
+          <!-- <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div> -->
+        </div>
+
+
 
       </div>
     </div>
