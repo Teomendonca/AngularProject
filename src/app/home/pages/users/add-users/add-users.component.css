@@ -1,0 +1,15 @@
+#title{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.btn{
+    margin-right: 4px;
+    margin-bottom: 8px;
+}
+
+.container{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #cecece;
+    border-radius: 8px;
+}
