@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Func } from '../users.component';
+import { UsersComponent } from '../users.component';
 
 interface User {
   id: number;
@@ -16,10 +17,9 @@ interface User {
 })
 export class UsersListComponent {
 
-  usersList: User[] = []
-  
-  constructor(private router: Router) {
+  @Input() usersList: User[]
 
+  constructor(private router: Router) {
     this.usersList = [
       {
         "id": 1,
@@ -48,13 +48,14 @@ export class UsersListComponent {
         "function": "Lider técnico"
       }
     ]
+
   }
 
+  get users() {
+    return this.usersList;
+  }
 
-  // constructor() {
-  //   
-  // }
-
+  
   editUser() {
     console.log("Editing user: ")
     this.router.navigate(["app/users/edit"])

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Func } from '../users.component';
+import { UsersListComponent } from '../users-list/users-list.component';
+import { UsersComponent } from '../users.component';
 
 @Component({
   selector: 'app-add-users',
@@ -12,9 +14,11 @@ export class AddUsersComponent {
   addUserForm: FormGroup;
   func = Func;
   keys: any[];
-  constructor(private router: Router) {
 
+  constructor(private router: Router) {
+        
     this.keys = Object.keys(this.func).filter(Number);
+
 
     this.addUserForm = new FormGroup({
       name: new FormControl('', Validators.required),
@@ -34,12 +38,14 @@ export class AddUsersComponent {
     })
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log("Usuário criado com sucesso")
     console.log(this.addUserForm.value);
+    // this.users.push(this.addUserForm.value);
+
     this.router.navigate(['app/users'])
   }
-  cancel(){
+  cancel() {
     this.router.navigate(['app/users'])
   }
 }

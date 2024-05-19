@@ -18,7 +18,7 @@
       <!-- email -->
       <div class="form-outline mb-4">
         <label class="form-label" for="form3Example1cg">E-mail</label>
-        <input type="text" formControlName="email" class="form-control form-control-lg">
+        <input type="email" formControlName="email" class="form-control form-control-lg">
 
         <div
           *ngIf="addUserForm.get('email')?.invalid && (addUserForm.get('email')?.dirty || addUserForm.get('email')?.touched)">
@@ -55,8 +55,8 @@
       </div>
 
       <div class="container">
-        <button (click)="onSubmit()" [disabled]="!addUserForm.valid" class="btn btn-primary">Save</button>
-        <button (click)="cancel()" class="btn btn-danger">Cancel</button>
+        <button (click)="onSubmit()" [disabled]="!addUserForm.valid" class="btn btn-primary" type="button">Save</button>
+        <button (click)="cancel()" class="btn btn-danger" type="button">Cancel</button>
       </div>
     </form>
   </div>
